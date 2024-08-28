@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <h1>Lista de Cliente</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>EMAIL</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var i in @ViewBag.listaCliente){
+
+                <tr>
+                    <td>@i.Id</td>
+                    <td>@i.Nome</td>
+                    <td>@i.CPF</td>
+                    <td>@i.Email</td>
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+    <br><hr><br>
+    <h1>Lista de Fornecedores</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>EMAIL</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var i in @ViewBag.listaFornecedor){
+
+                <tr>
+                    <td>@i.Id</td>
+                    <td>@i.Nome</td>
+                    <td>@i.Cnpj</td>
+                    <td>@i.Email</td>
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+</div>
